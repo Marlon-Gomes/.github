@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report a reproducible error or unexpected behavior.
+title: "fix(scope): title"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: Where is the bug occurring?
+      options:
+        - frontend
+        - backend
+        - infrastructure
+        - deps (Production dependency)
+        - a11y (Accessibility)
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this bug affect the project?
+      options:
+        - Suggestion (Minor visual glitch or typo)
+        - Minor (Workaround exists, affects few users)
+        - Major (Significant functionality broken for many)
+        - Critical (System down, data loss, or total blocker)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Details
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide a numbered list of steps to trigger the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected vs. Actual Behavior
+      description: What should have happened, and what actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Info
+      description: Browser, OS, Version, or relevant hardware.
+      placeholder: e.g. Chrome 120 on macOS Sonoma
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Screenshots, links to failing code, or any other details.
+
+  - type: upload
+    id: logs
+    attributes:
+      label: Log Files
+      description: Attach relevant log files (e.g., .log, .json, .txt) or crash reports.
+    validations:
+      required: false

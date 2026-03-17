@@ -1,0 +1,59 @@
+name: Chore
+description: Routine maintenance, build process updates, or non-production changes.
+title: "chore(scope): title"
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: What area of maintenance does this address?
+      options:
+        - deps (Routine or development dependency updates)
+        - build (Local build tools, compilers, or task runners)
+        - ci (GitHub Actions, pipeline scripts, or automation)
+        - release (Versioning, changelog automation, or deployment prep)
+        - compliance (License audits, legal requirements, or internal policy)
+        - other (Please specify in the summary)
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect development or repo health?
+      options:
+        - Suggestion (Non-urgent cleanup or optimization)
+        - Minor (Routine update with low risk of disruption)
+        - Major (Necessary update to keep tools or pipelines running)
+        - Critical (Development/Deployment is blocked until resolved or legal risk exists)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔧 Maintenance Details
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the maintenance task or update required.
+      placeholder: e.g., "Bump Node.js version in CI pipeline" or "Update linter rules for better consistency"
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning
+      description: Why is this update necessary now? (e.g., deprecated tool, team agreement, or audit requirement)
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links to documentation, error logs from failed builds, audit reports, or related PRs.

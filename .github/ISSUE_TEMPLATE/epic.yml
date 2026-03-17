@@ -1,0 +1,65 @@
+name: Epic
+description: Large-scale initiatives or projects encompassing multiple smaller issues.
+title: "epic(scope): Project Name"
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: Which primary domain does this project fall under?
+      options:
+        - frontend (User interface, client-side, or design)
+        - backend (API, database, or server logic)
+        - infrastructure (CI/CD, hosting, or dev-ops)
+        - integrations (Third-party services, APIs, or webhooks)
+        - quality (Performance, testing, or stability)
+        - research (Organization-wide exploration or spikes)
+        - other (Please specify in the summary)
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How critical is this initiative to the organization?
+      options:
+        - Suggestion (Potential future opportunity)
+        - Minor (Incremental improvement to existing workflows)
+        - Major (Necessary to meet pre-existing goals)
+        - Critical (Strategic necessity; blocks other major initiatives)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎯 Strategy & Goals
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the primary objective of this Epic?
+    validations:
+      required: true
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: What does "done" look like for this project? Define verifiable and measurable outcomes.
+      placeholder: |
+        e.g.,
+        - [ ] Latency for API endpoint /search is under 200ms.
+        - [ ] All 15 legacy UI components migrated to the new design system.
+        - [ ] 100% of user data successfully moved to the new database with zero loss.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add any relevant links, research, or high-level architectural notes.

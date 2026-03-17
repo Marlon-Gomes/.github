@@ -1,0 +1,64 @@
+name: Refactor
+description: Improvements to code structure, performance, or technical debt without changing behavior.
+title: "refactor(scope): title"
+labels: ["refactor"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: What is the primary focus of this refactor?
+      options:
+        - perf (Performance or resource optimization)
+        - debt (Addressing "todo" items or legacy patterns)
+        - cleanup (Improving readability or file structure)
+        - other (Please specify in the summary)
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this improve the codebase?
+      options:
+        - Suggestion (Minor cleanup or stylistic alignment)
+        - Minor (Improved maintainability for a specific module)
+        - Major (Significant reduction in technical debt or complexity)
+        - Critical (Critical performance fix or structural repair required for stability)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ Refactor Details
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What specific code or patterns are being refactored?
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning
+      description: Why is this refactor necessary? (e.g., "This function is too complex to test" or "The current loop is O(n²)")
+    validations:
+      required: true
+  - type: textarea
+    id: risk-assessment
+    attributes:
+      label: Risk Assessment
+      description: Are there any high-risk areas or breaking changes to internal APIs?
+      placeholder: e.g., "Changes internal utility X which is used by the auth module."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links to related issues, benchmarks, or snippets of the code in question.

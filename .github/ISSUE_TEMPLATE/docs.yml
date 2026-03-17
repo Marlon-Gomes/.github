@@ -1,0 +1,80 @@
+name: Documentation Issue
+description: Improvements or updates to code, project, or release documentation.
+title: "docs(scope): title"
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: What area does this affect?
+      options:
+        - code (Inline comments/Docstrings)
+        - project (README, CONTRIBUTING, etc.)
+        - changelog (Version history)
+        - rfc (Design proposals)
+        - other (Please specify in the summary)
+
+  - type: checkboxes
+    id: problem-type
+    attributes:
+      label: Problem Type
+      description: What is the nature of this documentation issue? (Select all that apply)
+      options:
+        - label: Missing (Information is completely absent)
+        - label: Outdated (Information is no longer accurate)
+        - label: Incorrect (Information is factually wrong)
+        - label: Unclear (Information is confusing or poorly written)
+        - label: Non-compliant (Fails to meet a required standard)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: audience
+    attributes:
+      label: Affected Audience
+      description: Who will benefit from this change? (Select all that apply)
+      options:
+        - label: End-users
+        - label: Developers (Contributors)
+        - label: DevOps/Maintainers
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect the reliability of our documentation?
+      options:
+        - Suggestion (Stylistic improvement or minor typo)
+        - Minor (Slightly confusing but users can figure it out)
+        - Major (Users are frequently misled or wasting time)
+        - Critical (Information is dangerously wrong or non-compliant with a standard)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Details
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Summary
+      description: Describe what needs to be added or fixed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add any relevant links, code snippets, screenshots, or compliance references.
+      placeholder: e.g., "See lines 45-60 in auth.js" or "Link to WCAG AA standards"

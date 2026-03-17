@@ -1,0 +1,50 @@
+name: Task
+description: General work, research investigations, or administrative items.
+title: "task(scope): title"
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: What kind of task is this?
+      options:
+        - spike (Time-boxed technical investigation)
+        - research (Data gathering or discovery)
+        - admin (Repository or organization management)
+        - other (Please specify in the summary)
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this task affect development or repo health?
+      options:
+        - Suggestion (Internal cleanup or non-urgent research)
+        - Minor (Routine maintenance or small process tweak)
+        - Major (Significant friction for the team if not addressed)
+        - Critical (Development is blocked or repo stability is at risk)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Details
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the work to be performed.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Relevant links, background information, or specific questions to be answered.

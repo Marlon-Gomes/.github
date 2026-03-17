@@ -1,0 +1,41 @@
+{
+  "config": {
+    "default": true,
+    // Enforce ATX heading style
+    "MD003": {
+      "style": "atx"
+    },
+    // Ensure consistent unordered list markers
+    "MD004": { "style": "dash" },
+    // Enforce 2-space indentation for unordered lists
+    "MD007": { "indent": 2 },
+    // Enforce 80-character line length
+    "MD013": {
+      "line_length": 80,
+      "code_blocks": false,
+      "tables": false
+    },
+    // No duplicate sibling headings
+    "MD024": {
+      "siblings_only": true
+    },
+    // No multiple top-level headings in the same document
+    "MD025": {
+      "level": 1,
+      // Disabled to avoid conflicts for GitHub Issue and PR Templates
+      "front_matter_title": ""
+    },
+    // Allow inline HTML elements
+    "MD033": false,
+    // Horizontal rule style
+    "MD035": {
+      "style": "---"
+    },
+    // Enforce fenced code blocks with backticks (```)
+    "MD046": { "style": "fenced" },
+    "MD048": { "style": "backtick" },
+    "MD050": { "style": "asterisk" }
+  },
+  // Fix violations automatically when running the CLI
+  "fix": true
+}

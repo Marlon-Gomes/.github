@@ -1,0 +1,58 @@
+name: Test
+description: Adding new tests, refactoring suites, or improving performance benchmarks.
+title: "test(scope): title"
+labels: ["testing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Triage
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: What layer of testing are you addressing?
+      options:
+        - unit (Individual functions or components)
+        - integration (How parts work together)
+        - e2e (End-to-end user flows)
+        - bench (Performance benchmarks or load testing)
+        - other (Please specify in the summary)
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect our confidence in the code?
+      options:
+        - Suggestion (Adding coverage for "nice-to-have" edge cases)
+        - Minor (Improving test readability or refactoring helpers)
+        - Major (Fixing flaky tests or covering missing critical paths)
+        - Critical (Tests are broken or deployment is blocked by false failures)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧪 Testing Details
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the test(s) to be added or modified.
+    validations:
+      required: true
+  - type: textarea
+    id: targets
+    attributes:
+      label: Test Targets
+      description: Which specific files, functions, or features need testing?
+      placeholder: e.g., "authentication-service.js" or "Login button click-flow"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links to related code, existing test failures, or performance requirements.
