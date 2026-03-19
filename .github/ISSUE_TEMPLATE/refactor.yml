@@ -13,9 +13,9 @@ body:
       label: Scope
       description: What is the primary focus of this refactor?
       options:
-        - perf (Performance or resource optimization)
-        - debt (Addressing "todo" items or legacy patterns)
-        - cleanup (Improving readability or file structure)
+        - perf (Efficiency, resource optimization, or latency improvements)
+        - debt (Addressing "todo" items, legacy patterns, or complexity warnings)
+        - cleanup (Improving readability, file structure, or code smell resolution)
         - other (Please specify in the summary)
     validations:
       required: true

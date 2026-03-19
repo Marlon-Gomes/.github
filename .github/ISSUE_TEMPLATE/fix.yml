@@ -13,12 +13,12 @@ body:
       label: Scope
       description: Where is the bug occurring?
       options:
-        - frontend
-        - backend
-        - infrastructure
-        - deps (Production dependency)
-        - a11y (Accessibility)
-        - other
+        - frontend (User interface, client-side logic, or presentation layer)
+        - backend (Core business logic, data processing, or server-side services)
+        - infrastructure (Environment configuration, networking, or deployment resources)
+        - deps (Correcting regressions or broken functionality in production dependencies)
+        - a11y (Accessibility standards, inclusive design, or assistive technology compatibility)
+        - other (Please specify in the summary)
     validations:
       required: true
   - type: dropdown

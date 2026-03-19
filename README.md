@@ -1,7 +1,7 @@
 # Organization Standards & Templates
 
 This meta-repository serves as the central GitHub configuration for
-@Marlon-Gomes.
+[@Marlon-Gomes](https://github.com/Marlon-Gomes).
 
 Some files stored here are "magic" defaults; they are automatically inherited by
 every repository in the organization that does not have its own local version.
@@ -31,16 +31,16 @@ debt.
 - **`task.yml`**: Research spikes, investigations, and administrative work.
 - **`test.yml`**: New test suites, flaky test fixes, and benchmarks.
 
-## 📜 Changelog
+## Changelog
 
 All notable changes to these organization-wide templates are documented in the
 [CHANGELOG.md](./CHANGELOG.md). This file is not inherited by other
 repositories in the organization; each project must maintain its own `CHANGELOG`
 file.
 
-## 📄 License
+## License
 
 The contents of **this specific repository** (templates and standards) are
-licensed under the **MIT License**. This license is not inherited by other
-repositories in the organization; each project must maintain its own `LICENSE`
-file.
+licensed under the [MIT License](./LICENSE). This license is not inherited by
+other repositories in the organization; each project must maintain its own
+`LICENSE` file.

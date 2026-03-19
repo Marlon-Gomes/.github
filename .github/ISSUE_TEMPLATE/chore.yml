@@ -18,6 +18,7 @@ body:
         - ci (GitHub Actions, pipeline scripts, or automation)
         - release (Versioning, changelog automation, or deployment prep)
         - compliance (License audits, legal requirements, or internal policy)
+        - style (Formatting, whitespace, or purely stylistic/system-level linting)
         - other (Please specify in the summary)
     validations:
       required: true

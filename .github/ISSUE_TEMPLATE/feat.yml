@@ -15,7 +15,7 @@ body:
       options:
         - core (Core logic, engine, or shared libraries)
         - interface (UI, CLI commands, or API endpoints)
-        - integration (Data flow, plugins, or third-party connections)
+        - integration (Third-party services, plugins, or data flow)
         - experience (UX, performance, or workflow polish)
         - other (Please specify in the summary)
     validations:
