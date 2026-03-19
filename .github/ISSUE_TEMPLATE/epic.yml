@@ -13,10 +13,10 @@ body:
       label: Scope
       description: Which primary domain does this project fall under?
       options:
-        - frontend (User interface, client-side, or design)
-        - backend (API, database, or server logic)
-        - infrastructure (CI/CD, hosting, or dev-ops)
-        - integrations (Third-party services, APIs, or webhooks)
+        - frontend (User interface, client-side logic, or presentation layer)
+        - backend (Server-side logic, API, or database management)
+        - infrastructure (CI/CD, environment configuration, or dev-ops)
+        - integration (Third-party services, APIs, or webhooks)
         - quality (Performance, testing, or stability)
         - research (Organization-wide exploration or spikes)
         - other (Please specify in the summary)

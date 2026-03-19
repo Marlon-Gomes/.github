@@ -12,6 +12,23 @@ unless they impact the user experience.
 
 ## Unreleased
 
+## [0.2.0] - 2026-03-19
+
+### Added
+
+- A **style** scope to `chore` for purely stylistic or system-level linting
+tasks that do not change code behavior.
+- Sample issues to `fix` scopes.
+- Guidance for resolving **code smells** and **complexity warnings** within the
+**cleanup** and **debt** scopes of `refactor`.
+
+### Changed
+
+- Generalized `epic` issue template scope descriptions to be domain-agnostic.
+- Updated `fix(deps)` scope to focus on functional regressions and broken
+dependency functionality.
+- Updated `docs` scope validation to **required**.
+
 ## [0.1.0] - 2026-03-17
 
 ### Added
@@ -24,4 +41,5 @@ and test.
 [semver]: https://semver.org/spec/v2.0.0.html
 
 <!-- Linked releases -->
+[0.2.0]: https://github.com/Marlon-Gomes/.github/releases/tag/v0.2.0
 [0.1.0]: https://github.com/Marlon-Gomes/.github/releases/tag/v0.1.0

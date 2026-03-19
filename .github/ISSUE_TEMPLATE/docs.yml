@@ -19,6 +19,8 @@ body:
         - changelog (Version history)
         - rfc (Design proposals)
         - other (Please specify in the summary)
+      validations:
+        required: true
 
   - type: checkboxes
     id: problem-type
